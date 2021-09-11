@@ -11,38 +11,45 @@ public class Self_Checkout {
         System.out.print("Enter the price of item 1: ");
         Scanner price1Inp = new Scanner(System.in);
         String price1String = price1Inp.nextLine();
-        int price1 = Integer.parseInt(price1String);
 
         System.out.print("Enter the quantity of item 1: ");
         Scanner quant1Inp = new Scanner(System.in);
         String quant1String = quant1Inp.nextLine();
-        int quant1 = Integer.parseInt(quant1String);
 
         System.out.print("Enter the price of item 2: ");
         Scanner price2Inp = new Scanner(System.in);
         String price2String = price2Inp.nextLine();
-        int price2 = Integer.parseInt(price2String);
 
         System.out.print("Enter the quantity of item 2: ");
         Scanner quant2Inp = new Scanner(System.in);
         String quant2String = quant2Inp.nextLine();
-        int quant2 = Integer.parseInt(quant2String);
 
         System.out.print("Enter the price of item 3: ");
         Scanner price3Inp = new Scanner(System.in);
         String price3String = price3Inp.nextLine();
-        int price3 = Integer.parseInt(price3String);
 
         System.out.print("Enter the quantity of item 3: ");
         Scanner quant3Inp = new Scanner(System.in);
         String quant3String = quant3Inp.nextLine();
+
+        int price1 = Integer.parseInt(price1String);
+        int quant1 = Integer.parseInt(quant1String);
+        int price2 = Integer.parseInt(price2String);
+        int quant2 = Integer.parseInt(quant2String);
+        int price3 = Integer.parseInt(price3String);
         int quant3 = Integer.parseInt(quant3String);
 
         int subtotal1 = price1 * quant1;
         int subtotal2 = price2 * quant2;
         int subtotal3 = price3 * quant3;
         double subtotalfinal = subtotal1 + subtotal2 +subtotal3;
-        double total = subtotalfinal * .055;
+        double tax = subtotalfinal * .055;
+        double total = subtotalfinal + tax;
+
+        System.out.printf("Subtotal: $%.2f\n",subtotalfinal);
+        System.out.printf("Tax: $%.2f\n", tax);
+        System.out.printf("Total: $%.2f", total);
+
 
     }
 }
